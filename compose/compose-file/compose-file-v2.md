@@ -165,32 +165,32 @@ build process.
 First, specify the arguments in your Dockerfile:
 
     ARG buildno
-    ARG password
+    ARG gitcommithash
 
     RUN echo "Build number: $buildno"
-    RUN script-requiring-password.sh "$password"
+    RUN echo "Based on commit: $gitcommithash"
 
-Then specify the arguments under the `build` key. You can pass either a mapping
+Then specify the arguments under the `build` key. You can pass a mapping
 or a list:
 
     build:
       context: .
       args:
         buildno: 1
-        password: secret
+        gitcommithash: cdc3b19
 
     build:
       context: .
       args:
         - buildno=1
-        - password=secret
+        - gitcommithash=cdc3b19
 
 You can omit the value when specifying a build argument, in which case its value
 at build time is the value in the environment where Compose is running.
 
     args:
       - buildno
-      - password
+      - gitcommithash
 
 > **Note**: YAML boolean values (`true`, `false`, `yes`, `no`, `on`, `off`) must
 > be enclosed in quotes, so that the parser interprets them as strings.
@@ -316,6 +316,16 @@ Specify a custom container name, rather than a generated default name.
 Because Docker container names must be unique, you cannot scale a service
 beyond 1 container if you have specified a custom name. Attempting to do so
 results in an error.
+
+### device_cgroup_rules
+
+> [Added in version 2.3 file format](compose-versioning.md#version-23).
+
+Add rules to the cgroup allowed devices list.
+
+    device_cgroup_rules:
+      - 'c 1:3 mr'
+      - 'a 7:* rmw'
 
 ### devices
 
@@ -1144,6 +1154,8 @@ expressed in the short form.
 - `volume`: configure additional volume options
   - `nocopy`: flag to disable copying of data from a container when a volume is
     created
+- `tmpfs`: configure additional tmpfs options
+  - `size`: the size for the tmpfs mount in bytes
 
 
 ```none

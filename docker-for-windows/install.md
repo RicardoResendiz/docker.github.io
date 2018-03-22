@@ -5,10 +5,13 @@ title: Install Docker for Windows
 ---
 
 Docker for Windows is a [Docker Community Edition
-(CE)](https://www.docker.com/community-edition) app. The Docker for Windows
+(CE)](https://www.docker.com/community-edition) desktop app. The Docker for Windows 
 install package includes everything you need to run Docker on a Windows system.
 This topic describes pre-install considerations, and how to download and install
 Docker for Windows.<br><br>
+
+>**Installing Docker on Windows Server?** Please see 
+[installing Docker EE on Windows Server](/install/windows/docker-ee.md).
 
 > **Already have Docker for Windows?**
 > If you already have Docker for
@@ -16,8 +19,9 @@ Windows installed, and are ready to get started, skip to
 [Get started with Docker for Windows](index.md) for a quick tour of
 the command line, settings, and tools.
 
->**Looking for Release Notes?** [Get release notes for all
-versions here](release-notes.md).
+>**Looking for Release Notes?** Get release notes for [Stable](release-notes.md)
+>and [Edge](edge-release-notes.md) releases.
+
 
 ## Download Docker for Windows
 
@@ -64,7 +68,7 @@ For more about Stable and Edge channels, see the
 
 * Legacy (`.msi`) installers are available for [Edge](https://download.docker.com/win/edge/InstallDocker.msi) and [Stable](https://download.docker.com/win/stable/InstallDocker.msi) channels.
 
-* Docker for Windows is designed to configure Docker development environments on Windows 10 and on Windows Server 2016. You can develop both Docker Linux containers and Docker Windows containers with Docker for Windows. To run Docker Windows containers in production, see instructions for [installing Docker EE on Windows Server 2016](/install/windows/docker-ee.md). To run Docker Linux containers in production, see [instructions for installing Docker on Linux](/install/index.md).
+* Docker for Windows is designed to configure Docker development environments on Windows 10. You can develop both Docker Linux containers and Docker Windows containers with Docker for Windows. To run Docker Windows containers in production, see instructions for [installing Docker EE on Windows Server 2016](/install/windows/docker-ee.md). To run Docker Linux containers in production, see [instructions for installing Docker on Linux](/install/index.md).
 
 * Docker for Windows requires 64bit Windows 10 Pro with Hyper-V available. See [What to know before you install](/docker-for-windows/install.md#what-to-know-before-you-install) for a full list
 of prerequisites.
@@ -104,7 +108,7 @@ guarantees. For more information, see
 <p />
 * **What the Docker for Windows install includes**: The installation provides [Docker Engine](/engine/userguide/), Docker CLI client, [Docker Compose](/compose/overview.md), [Docker Machine](/machine/overview.md), and [Kitematic](/kitematic/userguide.md).
 
-### About Windows containers and Windows Server 2016
+### About Windows containers
 
 Looking for information on using Windows containers?
 
@@ -115,11 +119,9 @@ provides a tutorial on how to set up and run Windows containers on Windows 10 or
 with Windows Server 2016. It shows you how to use a MusicStore application with
 Windows containers.
 <p />
-* [Setup - Windows Server 2016 (Lab)](https://github.com/docker/labs/blob/master/windows/windows-containers/Setup-Server2016.md) specifically describes environment setup.
-<p />
 * Docker Container Platform for Windows Server 2016 [articles and blog posts](https://www.docker.com/microsoft/) on the Docker website
 
-## Install Docker for Windows
+## Install Docker for Windows desktop app
 
 1. Double-click **Docker for Windows Installer.exe** to run the installer.
 
@@ -165,16 +167,20 @@ Congratulations! You are up and running with Docker for Windows.
 
 ## Where to go next
 
-* [Getting started](index.md) provides an overview of Docker for Windows,
-basic Docker command examples, how to get help or give feedback, and
-links to all topics in the Docker for Windows guide.
+* [Getting started](index.md) provides an overview of Docker for Windows, basic
+  Docker command examples, how to get help or give feedback, and links to all
+  topics in the Docker for Windows guide.
 
 * [Get started with Docker](/get-started/) teaches you how to define and deploy
-applications with Docker.
+  applications with Docker.
 
-* [Troubleshooting](troubleshoot.md) describes common problems,
-workarounds, how to run and submit diagnostics, and submit issues.
+* [Troubleshooting](troubleshoot.md) describes common problems, workarounds, how
+  to run and submit diagnostics, and submit issues.
 
 * [FAQs](faqs.md) provides answers to frequently asked questions.
 
-* [Release Notes](release-notes.md) lists component updates, new features, and improvements associated with Stable and Edge releases.
+* [Release Notes](release-notes.md) lists component updates, new features, and
+  improvements associated with Stable releases (or [Edge Release
+  Notes](edge-release-notes.md)).
+
+* [Get Started with Docker](/get-started/) provides a general Docker tutorial.
